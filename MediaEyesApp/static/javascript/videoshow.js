@@ -53,6 +53,7 @@ function shfaqVideo() {
     var videoId = (match) ? match[4] : (matchShort) ? matchShort[4] : matchShortLink[4];
     var iframe = document.createElement('iframe');
     iframe.src = "https://www.youtube.com/embed/" + videoId;
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
     iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
     iframe.allowFullscreen = true;
 
